@@ -10,6 +10,7 @@ public class Product implements Serializable{
 	private double price;
 	private String description;
 	private Categorie categorie;
+	
 	public int getId() {
 		return id;
 	}

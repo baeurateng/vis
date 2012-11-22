@@ -24,7 +24,8 @@
         <property name="hibernate.hbm2ddl.auto" >create</property>
  
         <!-- Mapping files -->
-        <mapping resource="de/duckout/db/House.hbm.xml"/>
-        <mapping resource="de/duckout/db/Person.hbm.xml"/>
+        <mapping resource="vis/model/db/Categorie.hbm.xml"/>
+        <mapping resource="vis/model/db/Customer.hbm.xml"/>
+        <mapping resource="vis/model/db/Product.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
