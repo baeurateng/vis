@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22.11.2012 13:48:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="vis.model.db.Customer" table="CUSTOMER">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="firstname" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="lastname" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="eMail" type="java.lang.String" access="field">
+            <column name="EMAIL" />
+        </property>
+        <property name="passwort" type="java.lang.String">
+            <column name="PASSWORT" />
+        </property>
+        <property name="isSuperUser" type="boolean" access="field">
+            <column name="ISSUPERUSER" />
+        </property>
+    </class>
+</hibernate-mapping>

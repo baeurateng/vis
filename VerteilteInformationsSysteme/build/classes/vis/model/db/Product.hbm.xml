@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22.11.2012 13:48:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="vis.model.db.Product" table="PRODUCT">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <many-to-one name="categorie" class="vis.model.db.Categorie" fetch="join">
+            <column name="CATEGORIE" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
