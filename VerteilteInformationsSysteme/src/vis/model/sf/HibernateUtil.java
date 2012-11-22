@@ -1,20 +1,9 @@
 package vis.model.sf;
 
 import org.hibernate.cfg.*;
-//import org.hibernate.HibernateException;
-//import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-
-/**
- * To change the template for this generated type comment go to
- * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
- */
-
-
 public class HibernateUtil {
-
-
 
 		private static final SessionFactory sessionFactory;
 
