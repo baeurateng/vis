@@ -8,7 +8,7 @@ public class Customer  implements Serializable{
 	private String firstname;
 	private String lastname;
 	private String eMail;
-	private String passwort;
+	private String password;
 	private boolean isSuperUser;
 	public String getFirstname() {
 		return firstname;
@@ -28,11 +28,11 @@ public class Customer  implements Serializable{
 	public void seteMail(String eMail) {
 		this.eMail = eMail;
 	}
-	public String getPasswort() {
-		return passwort;
+	public String getPassword() {
+		return password;
 	}
-	public void setPasswort(String passwort) {
-		this.passwort = passwort;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public boolean isSuperUser() {
 		return isSuperUser;
