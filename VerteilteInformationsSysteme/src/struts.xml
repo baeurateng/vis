@@ -15,7 +15,7 @@
 		<!-- Add your actions here -->
 
 		<action name="index">
-			<result>pages/startpage.jsp</result>
+			<result>/pages/startpage.jsp</result>
 		</action>
 
 		<action name="Userlogin" class="vis.controller.action.LoginAction">
@@ -23,6 +23,11 @@
 			<result name="input">/pages/startpage.jsp</result>
 			<result name="registrieren">/pages/registerpage.jsp</result>
 		</action>
+		
+		<action name="Search" class="vis.controller.action.SearchAction">
+		    <result name="success">/pages/resultpage.jsp</result>
+		</action>
+		
 	</package>
 
 

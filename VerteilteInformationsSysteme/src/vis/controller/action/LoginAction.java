@@ -13,10 +13,8 @@ public class LoginAction extends ActionSupport {
 	public String execute(){
 		Customer dbUser = new Customer();
 		
-//		dbUser.setLastname("User1");
-		dbUser.seteMail("eMail@mail.de");
-//		dbUser.setFirstname("Vorname");
-		dbUser.setPassword("pas123");
+		dbUser.seteMail("a");
+		dbUser.setPassword("a");
 		
 		if (dbUser.geteMail().equals(getUsername())) {
 		
