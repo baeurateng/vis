@@ -4,7 +4,7 @@
 <!-- Generated 22.11.2012 13:48:31 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="vis.model.db.Product" table="PRODUCT">
-        <id name="id" type="int">
+        <id name="id" type="long">
             <column name="ID" />
             <generator class="assigned" />
         </id>

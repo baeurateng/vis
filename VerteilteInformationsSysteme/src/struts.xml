@@ -21,13 +21,11 @@
 		<action name="Userlogin" class="vis.controller.action.LoginAction">
 			<result name="success">/pages/webshoppage.jsp</result>
 			<result name="input">/pages/startpage.jsp</result>
-			<result name="register">/pages/registerpage.jsp</result>
 		</action>
 
 		<action name="Register" class="vis.controller.action.RegisterAction">
 			<result name="success">/pages/startpage.jsp</result>
 			<result name="input">/pages/registerpage.jsp</result>
-			<result name="failure">/pages/registerpage.jsp</result>
 		</action>		
 		
 		<action name="Search" class="vis.controller.action.SearchAction">

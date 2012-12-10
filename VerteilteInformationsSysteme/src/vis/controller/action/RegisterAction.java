@@ -22,7 +22,7 @@ public class RegisterAction extends ActionSupport{
 		CustomerManager customerManager = new CustomerManager();
 		customerManager.saveCustomer(customer);
 		
-		return "SUCCESS";
+		return "success";
 	}
 
 	public String getEmail() {

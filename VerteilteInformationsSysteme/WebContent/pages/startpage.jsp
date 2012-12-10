@@ -18,7 +18,7 @@
 		<s:submit method="execute" value="login" align="center" />
 	</s:form>
 
-	<s:a href="registerpage.jsp"><s:text name="startpage.register"></s:text></s:a>
+	<s:a href="pages/registerpage.jsp"><s:text name="startpage.register"></s:text></s:a>
 
 </body>
 </html>

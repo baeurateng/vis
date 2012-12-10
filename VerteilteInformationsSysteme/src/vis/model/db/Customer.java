@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Customer  implements Serializable{
 
 	private static final long serialVersionUID = -5513678738309831733L;
+	private long id;
 	private String firstname;
 	private String lastname;
 	private String eMail;
@@ -19,6 +20,14 @@ public class Customer  implements Serializable{
 		this.isSuperUser = isSuperUser;
 	}
 	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getFirstname() {
 		return firstname;
 	}
@@ -52,5 +61,4 @@ public class Customer  implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
 }

@@ -17,8 +17,8 @@
         <property name="eMail" type="java.lang.String" access="field">
             <column name="EMAIL" />
         </property>
-        <property name="passwort" type="java.lang.String">
-            <column name="PASSWORT" />
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
         </property>
         <property name="isSuperUser" type="boolean" access="field">
             <column name="ISSUPERUSER" />

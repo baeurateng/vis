@@ -11,11 +11,6 @@
 			<message key="errors.required" />
 		</field-validator>
 	</field>
-	<field name="mail">
-		<field-validator type="requiredstring">
-			<message key="errors.required" />
-		</field-validator>
-	</field>
 	<field name="email">
 		<field-validator type="requiredstring">
 			<message key="errors.required" />
@@ -23,7 +18,7 @@
 	</field>
 	<field name="password">
 		<field-validator type="requiredstring">
-			<message>Bitte Passwort eingeben!</message>
+			<message key="errors.required"></message>
 		</field-validator>
 	</field>
 </validators>
