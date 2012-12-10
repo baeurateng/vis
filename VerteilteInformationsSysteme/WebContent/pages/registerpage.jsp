@@ -8,6 +8,13 @@
 <title><s:text name="registerpage.title"/></title>
 </head>
 <body>
-
+	<s:form action="Register" focusElement="firstname">
+		<s:textfield name="firstname" key="registerpage.firstname" required="true"></s:textfield>
+		<s:textfield name="lastname" key="registerpage.lastname" required="true"></s:textfield>
+		<s:textfield name="email" key="registerpage.eMail" required="true"></s:textfield>
+		<s:password name="password" key="prompt.password" size="20" required="true" />
+		<br>
+		<s:submit method="execute" value="register" align="center" />
+	</s:form>
 </body>
 </html>

@@ -11,7 +11,7 @@ public class LoginAction extends ActionSupport {
 	private String lastname = "";
 	
 	public String execute(){
-		Customer dbUser = new Customer();
+		Customer dbUser = new Customer("a", "b", "c", "d", false);
 		
 		dbUser.seteMail("a");
 		dbUser.setPassword("a");
@@ -28,7 +28,7 @@ public class LoginAction extends ActionSupport {
 			} else {
 				addActionError(getText("error.user.passwordforgotten"));
 				addActionError("Bitte geben Sie das richtige Passwort ein!");
-				return "input";
+				return INPUT;
 			}
 		}
 		else {
@@ -37,6 +37,9 @@ public class LoginAction extends ActionSupport {
 		}
 	}
 	
+	public String register(){
+		return "register";
+	}
 	public String getUsername() {
 		return username;
 	}

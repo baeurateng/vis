@@ -10,6 +10,15 @@ public class Customer  implements Serializable{
 	private String eMail;
 	private String password;
 	private boolean isSuperUser;
+	
+	public Customer(String firstname, String lastname, String eMail, String password, boolean isSuperUser){
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.eMail = eMail;
+		this.password = password;
+		this.isSuperUser = isSuperUser;
+	}
+	
 	public String getFirstname() {
 		return firstname;
 	}
