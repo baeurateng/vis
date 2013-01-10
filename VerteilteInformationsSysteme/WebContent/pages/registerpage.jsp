@@ -13,7 +13,8 @@
 		<s:textfield name="lastname" key="registerpage.lastname" required="true"></s:textfield>
 		<s:textfield name="email" key="registerpage.eMail" required="true"></s:textfield>
 		<s:password name="password" key="prompt.password" required="true"></s:password>
-		<s:submit method="execute" value="register" align="center" />
+		<s:checkbox name="superUser" key="prompt.superuser"></s:checkbox>
+		<s:submit method="execute" value="register" align="left" />
 	</s:form>
 </body>
 </html>

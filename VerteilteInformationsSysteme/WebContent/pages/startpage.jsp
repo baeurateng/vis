@@ -15,10 +15,10 @@
 			required="true" />
 		<br>
 
-		<s:submit method="execute" value="login" align="center" />
+		<s:submit method="execute" value="login" align="left" />
 	</s:form>
 
-	<s:a href="pages/registerpage.jsp"><s:text name="startpage.register"></s:text></s:a>
+	<s:a href="registerpage.jsp"><s:text name="startpage.register"></s:text></s:a>
 
 </body>
 </html>

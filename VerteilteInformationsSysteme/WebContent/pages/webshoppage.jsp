@@ -8,14 +8,25 @@
 <title><s:text name="webshoppage.title" /></title>
 </head>
 <body>
-	<s:form action="Search" focusElement="username">
-		<s:textfield name="product" key="prompt.product" size="20"
+	<s:form action="Search" focusElement="productname">
+		<s:textfield name="productname" key="prompt.productname" size="20"
 			required="false" />
-		<s:textfield name="categorie" key="prompt.categorie" size="20"
+		<s:textfield name="productdescription" key="prompt.productdescription" size="20"
+			required="false" />
+		<s:textfield name="productpricefrom" key="prompt.productpricefrom" size="20"
+			required="false" />
+		<s:textfield name="productpriceto" key="prompt.productpriceto" size="20"
 			required="false" />
 		<br>
 
-		<s:submit method="execute" value="search" align="center" />
+		<s:submit method="execute" value="search" align="left" />
 	</s:form>
+	<s:if test="%{dbUser.isSuperUser()}">
+	Superuser
+	</s:if>
+	<s:else>
+	kein Superuser
+	</s:else>
+	
 </body>
 </html>

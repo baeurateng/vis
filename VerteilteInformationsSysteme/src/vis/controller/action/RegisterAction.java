@@ -12,9 +12,19 @@ public class RegisterAction extends ActionSupport{
 	private String lastname;
 	private String email;
 	private String password;
-	private boolean isSuperUser;
+	
+	private boolean superUser;
+	 
+	public boolean isSuperUser() {
+		return superUser;
+	}
+ 
+	public void setSuperUser(boolean superUser) {
+		this.superUser = superUser;
+	}
 	
 	public String execute() {
+		this.setSuperUser(this.superUser);
 		
 		Customer customer = new Customer(this.getFirstname(),
 				this.getLastname(), this.getEmail(), this.getPassword(),
@@ -55,13 +65,5 @@ public class RegisterAction extends ActionSupport{
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public boolean isSuperUser() {
-		return isSuperUser;
-	}
-
-	public void setSuperUser(boolean isSuperUser) {
-		this.isSuperUser = isSuperUser;
 	}
 }

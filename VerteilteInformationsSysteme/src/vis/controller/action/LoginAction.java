@@ -1,5 +1,6 @@
 package vis.controller.action;
 
+import vis.model.bl.CustomerManager;
 import vis.model.db.Customer;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -9,12 +10,16 @@ public class LoginAction extends ActionSupport {
 	private String password = null;
 	private String firstname = "";
 	private String lastname = "";
+	private Customer dbUser;
 	
 	public String execute(){
-		Customer dbUser = new Customer("a", "b", "c", "d", false);
+		CustomerManager customerManager = new CustomerManager();
+		dbUser = customerManager.getCustomerByPrimaryKey(getUsername()); //Username == EMail
 		
-		dbUser.seteMail("a");
-		dbUser.setPassword("a");
+		if (dbUser == null) {
+			addFieldError("username", getText("error.user.register"));
+			return INPUT;
+		}
 		
 		if (dbUser.geteMail().equals(getUsername())) {
 		
@@ -33,10 +38,18 @@ public class LoginAction extends ActionSupport {
 		}
 		else {
 			addFieldError("username", getText("error.username.register"));
-			 return INPUT;
+			return INPUT;
 		}
 	}
 	
+	public Customer getDbUser() {
+		return dbUser;
+	}
+
+	public void setDbUser(Customer dbUser) {
+		this.dbUser = dbUser;
+	}
+
 	public String register(){
 		return "register";
 	}
