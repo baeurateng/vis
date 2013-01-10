@@ -1,5 +1,8 @@
 package vis.model.bl;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import vis.model.db.Customer;
@@ -25,5 +28,5 @@ public class CustomerManager {
 		session.save(customer);
 		session.getTransaction().commit();
 	}
-
+	
 }
