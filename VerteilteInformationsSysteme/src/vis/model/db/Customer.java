@@ -5,12 +5,15 @@ import java.io.Serializable;
 public class Customer  implements Serializable{
 
 	private static final long serialVersionUID = -5513678738309831733L;
-	private long id;
 	private String firstname;
 	private String lastname;
 	private String eMail;
 	private String password;
 	private boolean isSuperUser;
+	
+	public Customer(){
+		
+	}
 	
 	public Customer(String firstname, String lastname, String eMail, String password, boolean isSuperUser){
 		this.firstname = firstname;
@@ -18,14 +21,6 @@ public class Customer  implements Serializable{
 		this.eMail = eMail;
 		this.password = password;
 		this.isSuperUser = isSuperUser;
-	}
-	
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	public String getFirstname() {
