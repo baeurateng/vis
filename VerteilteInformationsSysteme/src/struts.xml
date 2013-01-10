@@ -30,6 +30,7 @@
 		
 		<action name="Search" class="vis.controller.action.SearchAction">
 		    <result name="success">/pages/resultpage.jsp</result>
+		    <result name="input">/pages/webshoppage.jsp</result>
 		</action>
 		
 	</package>
