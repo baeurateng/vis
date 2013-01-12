@@ -23,6 +23,9 @@
 	</s:form>
 	<s:if test="%{dbUser.isSuperUser()}">
 	Superuser
+	<s:form action="GetAllProducts">
+		<s:submit method="execute" value="manage products" align="left" />
+	</s:form>
 	</s:if>
 	<s:else>
 	kein Superuser

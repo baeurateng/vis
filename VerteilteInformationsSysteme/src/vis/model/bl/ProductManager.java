@@ -18,7 +18,12 @@ public class ProductManager {
 		session.getTransaction().commit();
 	}
 
-	public void deleteProductByPrimaryKey(String primaryKey) {
+	public void deleteProduct(Product product) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		session.delete(product);
+		session.getTransaction().commit();
 
 	}
 
@@ -45,7 +50,13 @@ public class ProductManager {
 	}
 	
 	public List<Product> getAllProducts(){
-		return null;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		List<Product> products = (List<Product>) session.createQuery("from Product").list();
+		session.getTransaction().commit();
+		
+		return products;
 	}
 
 }

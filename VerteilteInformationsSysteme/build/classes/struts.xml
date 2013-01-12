@@ -38,6 +38,11 @@
 			<result name="input">/pages/resultpage.jsp</result>
 		</action>
 
+		<action name="GetAllProducts" class="vis.controller.action.GetAllProductsAction">
+			<result name="success">/pages/productpage.jsp</result>
+			<result name="input">/pages/resultpage.jsp</result>
+		</action>
+		
 	</package>
 
 
