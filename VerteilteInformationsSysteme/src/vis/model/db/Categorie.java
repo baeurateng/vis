@@ -5,16 +5,19 @@ import java.io.Serializable;
 public class Categorie implements Serializable{
 
 	private static final long serialVersionUID = 5061174140325765038L;
-	private long id;
+
 	private String name;
 	private String description;
 	
-	public long getId() {
-		return id;
+	public Categorie(){
+		
 	}
-	public void setId(long id) {
-		this.id = id;
+	
+	public Categorie(String name, String description){
+		this.name = name;
+		this.description = description;
 	}
+	
 	public String getName() {
 		return name;
 	}

@@ -42,7 +42,22 @@
 			<result name="success">/pages/productpage.jsp</result>
 			<result name="input">/pages/resultpage.jsp</result>
 		</action>
+
+		<action name="GetAllCategories" class="vis.controller.action.GetAllCategoriesAction">
+			<result name="success">/pages/categoriepage.jsp</result>
+			<result name="input">/pages/resultpage.jsp</result>
+		</action>
 		
+		
+		<action name="AddCategorie" class="vis.controller.action.AddCategorieAction">
+			<result name="success">/pages/categoriepage.jsp</result>
+			<result name="input">/pages/categoriepage.jsp</result>
+		</action>
+
+		<action name="DeleteCategorie" class="vis.controller.action.DeleteCategorieAction">
+			<result name="success">/pages/categoriepage.jsp</result>
+			<result name="input">/pages/categoriepage.jsp</result>
+		</action>
 	</package>
 
 
