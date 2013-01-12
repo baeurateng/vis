@@ -5,13 +5,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title><s:text name="resultpage.title" /></title>
 </head>
 <body>
-	<p>
-	<s:iterator value="products">
-    	<s:property value="name"/><br>
-	</s:iterator>
-	</p>
+	<table border="0" cellspacing="0" cellpadding="1">
+		<tr>
+			<th>Products:</th>
+		</tr>
+		<s:iterator value="products">
+			<tr>
+				<s:form action="Detail">
+					<s:textfield name="name" readonly="true"></s:textfield>
+					<s:submit method="execute" value="detail" align="left" />
+				</s:form>
+			</tr>
+		</s:iterator>
+	</table>
 </body>
 </html>

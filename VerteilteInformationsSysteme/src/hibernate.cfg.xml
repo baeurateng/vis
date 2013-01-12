@@ -21,7 +21,7 @@
         
         <property name="current_session_context_class">thread</property>
         <property name="format_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto" >create</property>
+        <property name="hibernate.hbm2ddl.auto" >update</property>
  
         <!-- Mapping files -->
         <mapping resource="vis/model/db/Categorie.hbm.xml"/>

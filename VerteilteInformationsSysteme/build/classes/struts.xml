@@ -26,12 +26,18 @@
 		<action name="Register" class="vis.controller.action.RegisterAction">
 			<result name="success">/pages/startpage.jsp</result>
 			<result name="input">/pages/registerpage.jsp</result>
-		</action>		
-		
-		<action name="Search" class="vis.controller.action.SearchAction">
-		    <result name="success">/pages/resultpage.jsp</result>
 		</action>
-		
+
+		<action name="Search" class="vis.controller.action.SearchAction">
+			<result name="success">/pages/resultpage.jsp</result>
+			<result name="input">/pages/webshoppage.jsp</result>
+		</action>
+
+		<action name="Detail" class="vis.controller.action.DetailAction">
+			<result name="success">/pages/detailpage.jsp</result>
+			<result name="input">/pages/resultpage.jsp</result>
+		</action>
+
 	</package>
 
 
