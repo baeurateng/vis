@@ -8,6 +8,16 @@
 <title><s:text name="detailpage.title" /></title>
 </head>
 <body>
-	<s:property value="name"/>
+	<s:text name="prompt.productname" />
+	<s:property value="product.name"/>
+	<br>
+	<s:text name="prompt.productdescription" />
+	<s:property value="product.description"/>
+	<br>
+	<s:text name="prompt.productprice" />
+	<s:property value="product.price"/>
+	<br>
+	<s:text name="prompt.categorie" />
+	<s:property value="product.categorie.name"/>
 </body>
 </html>

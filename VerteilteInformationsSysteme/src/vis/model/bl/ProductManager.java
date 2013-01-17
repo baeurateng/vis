@@ -18,6 +18,16 @@ public class ProductManager {
 		session.getTransaction().commit();
 	}
 
+	public void deleteProductByPrimaryKey(String name) {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+
+		Product oldProduct = (Product) session.get(Product.class, name);
+		session.delete(oldProduct);
+
+		session.getTransaction().commit();
+	}
+
 	public void deleteProduct(Product product) {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -38,24 +48,69 @@ public class ProductManager {
 	}
 
 	public List<Product> getProductsByCategorie(Categorie categorie) {
-		return null;
-	}
-
-	public List<Product> getProductsByDescription(String description) {
-		return null;
-	}
-
-	public List<Product> getProductsByPrice(double priceLow, double priceHigh) {
-		return null;
-	}
-	
-	public List<Product> getAllProducts(){
+		/* a Hibernate session */
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
 		session.beginTransaction();
-		List<Product> products = (List<Product>) session.createQuery("from Product").list();
+		List<Product> products = (List<Product>) session
+				.createQuery("select * from product where categorie = :cat")
+				.setParameter("cat", categorie).list();
+
+		// session.getTransaction().commit();
+		return products;
+
+	}
+
+	public List<Product> getProductsByDescription(String description) {
+		/* a Hibernate session */
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+
+		List<Product> products = (List<Product>) session
+				.createQuery("from Product where description like :desc")
+				.setParameter("desc", "%" + description + "%").list();
+
 		session.getTransaction().commit();
-		
+		return products;
+	}
+
+	public List<Product> getProductsByPrice(double priceLow, double priceHigh) {
+		/* a Hibernate session */
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		List<Product> products = (List<Product>) session
+				.createQuery(
+						"from Product where price between :priceLow and :priceHigh")
+				.setParameter("priceLow", priceLow)
+				.setParameter("priceHigh", priceHigh).list();
+
+		return products;
+	}
+
+	public List<Product> getProductByPriceFrom(double priceFrom) {
+		/* a Hibernate session */
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		List<Product> products = (List<Product>) session
+				.createQuery("from Product where price > :priceFrom")
+				.setParameter("priceFrom", priceFrom).list();
+
+		return products;
+	}
+	
+	
+	
+	public List<Product> getAllProducts() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		List<Product> products = (List<Product>) session.createQuery(
+				"from Product").list();
+		session.getTransaction().commit();
+
 		return products;
 	}
 

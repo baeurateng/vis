@@ -17,6 +17,18 @@ public class DeleteCategorieAction extends ActionSupport {
 	private String description;
 	private List<Categorie> categories;
 	
+	public String execute(){
+		
+		CategorieManager cm = new CategorieManager();
+		cm.deleteCategorieByPrimaryKey(this.getName());
+		System.out.println(this.getName());
+		categories = cm.getAllCategoires();
+		
+		this.setName("");
+		
+		return SUCCESS;
+	}
+	
 	public List<Categorie> getCategories() {
 		return categories;
 	}
@@ -34,16 +46,5 @@ public class DeleteCategorieAction extends ActionSupport {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String execute(){
-		
-		CategorieManager cm = new CategorieManager();
-		cm.deleteCategorieByPrimaryKey(this.getName());
-		System.out.println(this.getName());
-		categories = cm.getAllCategoires();
-		
-		this.setName("");
-		
-		return SUCCESS;
 	}
 }

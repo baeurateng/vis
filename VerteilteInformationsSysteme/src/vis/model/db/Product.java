@@ -10,6 +10,17 @@ public class Product implements Serializable{
 	private String description;
 	private Categorie categorie;
 	
+	public Product(){
+		
+	}
+	
+	public Product(String name, String description, double price,
+			Categorie categorie) {
+		this.setName(name);
+		this.setDescription(description);
+		this.setPrice(price);
+		this.setCategorie(categorie);
+	}
 	public String getName() {
 		return name;
 	}

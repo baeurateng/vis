@@ -42,8 +42,6 @@ public class AddCategorieAction extends ActionSupport {
 		CategorieManager cm = new CategorieManager();
 		
 		if (!this.getName().isEmpty() && !this.getDescription().isEmpty()) {
-			this.setName(getName());
-			this.setDescription(getDescription());
 			Categorie categorie = new Categorie(this.name, this.description);
 			cm.saveCategorie(categorie);
 			

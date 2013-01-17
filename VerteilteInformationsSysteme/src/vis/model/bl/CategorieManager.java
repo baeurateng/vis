@@ -29,6 +29,15 @@ public class CategorieManager {
 		session.getTransaction().commit();
 	}
 	
+	public Categorie getCategorieByPrimaryKey(String name){
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		
+		Categorie categorie = (Categorie) session.get(Categorie.class, name);
+		
+		return categorie;
+	}
+	
 	@SuppressWarnings("unchecked")
 	public List<Categorie> getAllCategoires(){
 		List<Categorie> categorie = null;
@@ -41,5 +50,6 @@ public class CategorieManager {
 
         return categorie==null||categorie.isEmpty() ? null:categorie;
 	}
-
+	
+	
 }
