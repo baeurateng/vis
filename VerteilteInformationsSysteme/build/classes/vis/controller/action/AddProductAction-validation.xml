@@ -1,24 +1,25 @@
 <!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
     "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
 <validators>
-	<field name="firstname">
+	<field name="productname">
 		<field-validator type="requiredstring">
 			<message key="errors.required" />
 		</field-validator>
 	</field>
-	<field name="lastname">
+	<field name="productdescription">
 		<field-validator type="requiredstring">
 			<message key="errors.required" />
 		</field-validator>
 	</field>
-	<field name="email">
-		<field-validator type="email">
+	<field name="categoriename">
+		<field-validator type="requiredstring">
 			<message key="errors.required" />
 		</field-validator>
 	</field>
-	<field name="password">
-		<field-validator type="requiredstring">
-			<message key="errors.required"></message>
+	<field name="productprice">
+		<field-validator type="regex">
+		    <param name="expression"><![CDATA[^[0-9]*\.?[0-9]+$]]></param>
+			<message key="errors.productprice.required" />
 		</field-validator>
 	</field>
 </validators>

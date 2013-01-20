@@ -1,5 +1,6 @@
 package vis.controller.action;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import vis.model.bl.CategorieManager;
@@ -16,9 +17,14 @@ public class AddProductAction extends ActionSupport{
 	private String productprice;
 	private String productdescription;
 	private List<Product> products;
-	private List<Categorie> categories;
+	private List<Categorie> categories = new ArrayList<Categorie>();;
 	private String categoriename;
-
+	
+	public AddProductAction(){
+		CategorieManager cm = new CategorieManager();
+		categories = cm.getAllCategoires();
+	}
+	
 	public String execute(){
 		ProductManager pm = new ProductManager();
 		CategorieManager cm = new CategorieManager();
@@ -89,5 +95,4 @@ public class AddProductAction extends ActionSupport{
 	public void setCategoriename(String categoriename) {
 		this.categoriename = categoriename;
 	}
-
 }

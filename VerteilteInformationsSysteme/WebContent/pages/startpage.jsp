@@ -18,7 +18,7 @@
 		<s:submit method="execute" value="login" align="left" />
 	</s:form>
 
-	<s:a href="registerpage.jsp"><s:text name="startpage.register"></s:text></s:a>
+	<s:a href="http://localhost:8080/VerteilteInformationsSysteme/pages/registerpage.jsp"><s:text name="startpage.register"></s:text></s:a>
 
 </body>
 </html>

@@ -10,9 +10,9 @@
 <body>
 	<s:form action="AddProduct" focusElement="productname">
 		<s:text name="prompt.addproduct"/>
-		<s:textfield name="productname" key="prompt.productname"/>
-		<s:textfield name="productdescription" key="prompt.productdescription"/>
-		<s:textfield name="productprice" key="prompt.productprice"/>
+		<s:textfield name="productname" key="prompt.productname" required="true"/>
+		<s:textfield name="productdescription" key="prompt.productdescription" required="true"/>
+		<s:textfield name="productprice" key="prompt.productprice" required="true"/>
 		<s:select list="categories" headerKey="-1" name="categoriename" listKey="name" listValue="name"/>
 		<s:submit method="execute" value="add" align="left" />
 	</s:form>

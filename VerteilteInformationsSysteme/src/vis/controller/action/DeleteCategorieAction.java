@@ -20,7 +20,14 @@ public class DeleteCategorieAction extends ActionSupport {
 	public String execute(){
 		
 		CategorieManager cm = new CategorieManager();
-		cm.deleteCategorieByPrimaryKey(this.getName());
+		
+		try {
+			cm.deleteCategorieByPrimaryKey(this.getName());
+		} catch (Exception e) {
+			System.out.println(getText("error.categorie.used"));
+			System.exit(0);
+		}
+		
 		System.out.println(this.getName());
 		categories = cm.getAllCategoires();
 		

@@ -1,5 +1,6 @@
 package vis.controller.action;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import vis.model.bl.CategorieManager;
@@ -18,12 +19,16 @@ public class GetAllProductsAction extends ActionSupport {
 	private List<Product> products;
 	private List<Categorie> categories;
 	
+	public GetAllProductsAction(){
+		this.categories = new ArrayList<Categorie>();
+	}
+	
 	public String execute(){
 		ProductManager productmanager = new ProductManager();
 		products = productmanager.getAllProducts();
 		
 		CategorieManager categoriemanager = new CategorieManager();
-		categories = categoriemanager.getAllCategoires();
+		this.categories = categoriemanager.getAllCategoires();
 		
 		if (products != null) {
 			return SUCCESS;
